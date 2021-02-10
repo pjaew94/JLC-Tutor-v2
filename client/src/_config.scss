@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,800;0,900;1,200;1,400&display=swap');
+
+// Primary colors
+$cyan: #01c5c4;
+$darkBlue: #30475e;
+$orange: #ff9902;
+
+// Secondary colors
+$lightYellow: #f8f0c5;
+$lightBlue: #e1f7f7;
+$faintWhite: #fdfdfd;
+
+// Font Size / Weight
+$headerSize: 2.5rem;
+$headerWeight: 800;
+$paragraphSize: 0.9rem;
+$paragraphWeight: 400;
+
+// Flex Mixin
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+// Font Mixin
+@mixin primary-font($size, $weight) {
+    font-family: 'Nunito', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
