@@ -1,0 +1,11 @@
+@import "../../config";
+
+.login {
+    height: 100vh;
+    width: 100vw;
+    @include flex(center, center, row);
+    background-color: #4158d0;
+    background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}
+
+

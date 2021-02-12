@@ -1,0 +1,39 @@
+@import '../../config';
+
+.courses {
+    height: 100vh;
+    width: 100vw;
+    @include flex(center, center, row);
+    background-color: #4158d0;
+    background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+
+    .inner {
+        height: 85%;
+        width: 90%;
+        @include flex(center, space-between, column);
+        @extend %glassmorphism;
+        padding: 2%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    .courses {
+        .inner {
+            height: 100%;
+            width: 100%;
+            border-radius: 0;
+            padding: 4% 4%;
+        }
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 768px) {
+    .courses {
+        .inner {
+            height: 100%;
+            width: 100%;
+            border-radius: 0;
+            padding: 7% 5%;
+        }
+    }
+} 

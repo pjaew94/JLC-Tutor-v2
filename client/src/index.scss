@@ -29,4 +29,11 @@ input[type="search"]::-webkit-search-results-decoration {
     color: black;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+    border: none;
+}
+*:focus {
+    outline: none;
+}
 

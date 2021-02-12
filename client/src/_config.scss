@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,800;0,900;1,200;1,400&display=swap');
 
 // Primary colors
-$cyan: #01c5c4;
-$darkBlue: #30475e;
-$orange: #ff9902;
+$blue: #4358d0;
+$purple: #30475e;
+$orange: #ffcb71;
+$black:#504f4f;
 
 // Secondary colors
 $lightYellow: #f8f0c5;
 $lightBlue: #e1f7f7;
 $faintWhite: #fdfdfd;
+
 
 // Font Size / Weight
 $headerSize: 2.5rem;
@@ -29,4 +31,11 @@ $paragraphWeight: 400;
     font-family: 'Nunito', sans-serif;
     font-size: $size;
     font-weight: $weight;
+}
+
+%glassmorphism {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(218, 216, 216, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }

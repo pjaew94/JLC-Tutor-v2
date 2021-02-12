@@ -16,7 +16,7 @@ const initialState = {
   error: {},
 };
 
-export default function (state = initialState, actions) {
+export default function foo(state = initialState, actions) {
   const { type, payload, id, updatedPosts, subjectId } = actions;
 
   switch (type) {

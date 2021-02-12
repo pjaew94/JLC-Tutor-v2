@@ -1,0 +1,28 @@
+@import '../../config';
+
+.alerts {
+    padding: 20px 40px;
+    min-width: 450px;
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    margin: 0 50vw;
+    
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(218, 216, 216, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    h3 {
+        @include primary-font(1rem, 600);
+        color: $faintWhite;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 700px) {
+    .alerts {
+        width: 100vw;
+  
+        min-width: auto;
+        
+    }
+}
