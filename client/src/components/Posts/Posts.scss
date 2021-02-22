@@ -23,6 +23,7 @@
                     border-bottom: 1px solid black;
                     @include primary-font(1rem, 400);
                     padding: 5px;
+                    resize: none;
 
                     &::placeholder {
                         color: black;
@@ -136,6 +137,7 @@
                         @include primary-font(1rem, 400);
                         padding: 5px;
                         margin: 10px 0;
+                        resize: none;
 
                         &::placeholder {
                             color: black;
