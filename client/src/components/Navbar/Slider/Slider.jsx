@@ -1,26 +1,33 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { logout } from "../../../redux/actions/auth";
 
-const Slider = ({ slide, setSlide }) => {
+import { useMediaQuery } from "react-responsive";
 
-    const dispatch = useDispatch();
-    
+const Slider = ({ slide, setSlide }) => {
+  const dispatch = useDispatch();
+
+  const isMobile = useMediaQuery({
+    query: "(max-width: 1024px)",
+  });
+
   return (
-    <div
-      className={`slider ${slide && 'slide-in'}`}
-    >
+    <div className={`slider ${slide && "slide-in"}`}>
       <div className="slider-links">
-        <Link className="courses-link" to="/courses">
+      <div className='directory-links'>
+        <Link className="courses-link slider-link" to="/courses">
           Courses
         </Link>
-        <button onClick={() => dispatch(logout())}>Logout</button>
+        {isMobile && (
+          <Link className="pomodoro-link slider-link" to="/pomodoro">
+            Pomodoro
+          </Link>
+        )}
+        </div>
+        <button className='logout-button' onClick={() => dispatch(logout())}>Logout</button>
       </div>
-      <div
-        className="slider-dead-space"
-        onClick={() => setSlide(false)}
-      ></div>
+      <div className="slider-dead-space" onClick={() => setSlide(false)}></div>
     </div>
   );
 };

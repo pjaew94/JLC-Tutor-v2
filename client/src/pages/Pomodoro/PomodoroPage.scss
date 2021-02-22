@@ -1,0 +1,10 @@
+@import '../../config';
+
+.pomodoro-page {
+    height: 100vh;
+    width: 100vw;
+    padding: 7% 5%;
+    @include flex(center, space-between, column);
+    background-color: #4158d0;
+    background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}

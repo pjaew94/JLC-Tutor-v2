@@ -37,3 +37,14 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+button {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    border: none;
+    text-decoration: none;
+}

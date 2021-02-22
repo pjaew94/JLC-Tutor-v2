@@ -75,8 +75,8 @@ router.post(
   }
 );
 0
-// @route    GET api/posts
-// @desc     Get all posts
+// @route    GET api/subjects
+// @desc     Get all subjects
 // @access   Private
 router.get("/", async (req, res) => {
   try {

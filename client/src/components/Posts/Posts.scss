@@ -1,0 +1,288 @@
+@import "../../config";
+
+.posts {
+    @include flex(flex-start, flex-start, column);
+    height: 100%;
+    width: 60%;
+    padding: 20px;
+    overflow-y: scroll;
+
+    .posts-inner {
+        @include flex(flex-start, flex-start, column);
+        .post-form {
+            width: 100%;
+            @include flex(flex-start, space-between, column);
+            margin-bottom: 20px;
+            .upper-container {
+                width: 100%;
+                @include flex(flex-start, space-between, row);
+                margin-bottom: 10px;
+                .post-homework-input-field {
+                    width: 65%;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    @include primary-font(1rem, 400);
+                    padding: 5px;
+
+                    &::placeholder {
+                        color: black;
+                    }
+                }
+                .post-due-input-field {
+                    width: 30%;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    @include primary-font(1rem, 400);
+                    padding: 5px;
+                    &::placeholder {
+                        color: black;
+                    }
+                }
+            }
+            .post-input-submit {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 15px;
+                border: 1px solid black;
+                border-radius: 10px;
+                @include primary-font(1rem, 600);
+            }
+        }
+
+        .post {
+            @include flex(center, flex-start, column);
+            width: 100%;
+            margin-bottom: 20px;
+            .content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                min-height: 120px;
+                background: rgba(255, 255, 255, 0.15);
+
+                border-radius: 20px;
+                padding: 15px;
+                .left {
+                    @include flex(flex-start, space-between, column);
+                    height: 100%;
+                    p {
+                        @include primary-font(1rem, 500);
+                        span {
+                            @include primary-font(1rem, 700);
+                        }
+                    }
+                    .homework {
+                        margin-bottom: 15px;
+                    }
+                }
+                .right {
+                    height: 100%;
+                    margin-left: 20px;
+                    p {
+                        @include primary-font(1rem, 400);
+                    }
+                }
+            }
+            .likes-comment {
+                @include flex(flex-start, flex-start, column);
+                padding: 10px;
+                width: 100%;
+                .buttons {
+                    @include flex(center, space-between, row);
+                    width: 100%;
+                    .left-buttons {
+                        @include flex(center, space-between, row);
+                        .liked {
+                            font-size: 1.5rem;
+                            color: red;
+                            margin-right: 5px;
+                        }
+                        .like-icon {
+                            margin-right: 5px;
+                        }
+                        .likes-count {
+                            @include primary-font(1rem, 700);
+                            margin-right: 10px;
+                        }
+                        .icon {
+                            font-size: 1.5rem;
+                        }
+                        .comment-icon {
+                            margin-right: 5px;
+                        }
+                        .view-comments {
+                            @include primary-font(1rem, 500);
+                        }
+                    }
+                    .right-buttons {
+                        .icon {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                .comment-form {
+                    @include flex(flex-start, center, column);
+                    width: 100%;
+                    padding-left: 6%;
+                    margin-bottom: 10px;
+                    .input-field {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid black;
+                        @include primary-font(1rem, 400);
+                        padding: 5px;
+                        margin: 10px 0;
+
+                        &::placeholder {
+                            color: black;
+                        }
+                    }
+                    .input-submit {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 10px 15px;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        @include primary-font(1rem, 600);
+                    }
+                }
+
+                .comment {
+                    @include flex(flex-start, space-between, column);
+                    width: 100%;
+                    padding-left: 6%;
+                    margin-bottom: 10px;
+
+                    p {
+                        @include primary-font(1rem, 500);
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                    .text {
+                        margin-bottom: 15px;
+                    }
+
+                    .bottom-container {
+                        @include flex(center, space-between, row);
+                        width: 100%;
+                        .date {
+                            font-size: 0.9rem;
+                        }
+                        .delete-comment {
+                            cursor: pointer;
+                            .delete-icon {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 768px) {
+    .posts {
+        min-height: 100vh;
+        padding: 0;
+        height: auto;
+        width: 100vw;
+        background-color: #4158d0;
+        background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+
+        .posts-inner {
+            min-height: 100vh;
+            padding: 20px;
+            height: auto;
+            background: rgba(255, 255, 255, 0.2);
+            .post-form {
+                height: auto;
+                .upper-container {
+                    .post-homework-input-field {
+                        font-size: 0.9rem;
+                    }
+                    .post-due-input-field {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            .post {
+                .content {
+                    border-radius: 10px;
+                    align-items: flex-start;
+                    min-height: 80px;
+                    .left {
+                        p {
+                            font-size: 0.9rem;
+                            span {
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                    .right {
+                        p {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+                .likes-comment {
+                    .buttons {
+                        .left-buttons {
+                            .liked {
+                                font-size: 1.2rem;
+                            }
+                            .likes-count {
+                                font-size: 0.9rem;
+                            }
+                            .icon {
+                                font-size: 1.2rem;
+                            }
+                            .view-comments {
+                                font-size: 0.9rem;
+                            }
+                        }
+                        .right-buttons {
+                            .icon {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                    .comment-form {
+                        height: auto;
+
+                        .input-field {
+                            font-size: 0.9rem;
+                        }
+                    }
+                    .comment {
+                        p {
+                            font-size: 0.9rem;
+                            span {
+                                font-size: 0.9rem;
+                            }
+                        }
+                        .text {
+                            font-size: 0.9rem;
+                        }
+                        .bottom-container {
+                            .date {
+                                font-size: 0.8rem;
+                            }
+                            .delete-comment {
+                                .delete-icon {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

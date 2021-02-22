@@ -17,7 +17,15 @@
         color: $faintWhite;
     }
 }
-
+@media only screen and (min-width: 2560px) and (max-width: 3840px) {
+    .alerts {
+        width: 700px;
+        top: 5%;
+        h3 {
+            font-size: 1.4rem;
+        }
+    }  
+}
 @media only screen and (min-width: 280px) and (max-width: 700px) {
     .alerts {
         width: 100vw;

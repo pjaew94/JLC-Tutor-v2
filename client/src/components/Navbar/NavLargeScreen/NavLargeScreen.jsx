@@ -12,7 +12,7 @@ const NavLargeScreen = () => {
         <Link className="courses-link" to="/courses">
           Courses
         </Link>
-        <button onClick={() => dispatch(logout())}>Logout</button>
+        <a className='logout-button' href="/" onClick={() => dispatch(logout())}>Logout</a>
       </div>
     )
 }

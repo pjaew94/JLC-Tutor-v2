@@ -1,6 +1,6 @@
 @import '../../config';
 
-form {
+.register-form {
     @include flex(flex-start, center, column);
     height: auto;
     min-width: 450px;
@@ -69,8 +69,40 @@ form {
     }
 }
 
+@media only screen and (min-width: 2560px) and (max-width: 3840px) {
+    .register-form {
+        width: 700px;
+        padding: 200px 70px;
+        h1 {
+            margin-bottom: 50px;
+            font-size: 3.5em;
+        }
+        .text-input,
+        select {
+            padding: 20px 30px;
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            &::placeholder {
+                font-size: 1.4rem;
+            }
+        }
+        .submit-button {
+            font-size: 2rem;
+            padding: 20px 55px;
+            border-radius: 40px;
+            margin-bottom: 40px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            .register-link {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 280px) and (max-width: 700px) {
-    form {
+    .register-form {
         height: 100vh;
         width: 100vw;
         min-width: auto;

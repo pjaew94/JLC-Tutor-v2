@@ -5,7 +5,6 @@ import { GET_POSTS, REMOVE_POSTS, POSTS_ERROR, UPDATE_LIKES, DELETE_POST,ADD_COM
 // Get posts for the specific subject;
 export const getSubjectPosts = (subject) => async dispatch => {
   try {
-
       const res = await axios.get(`/api/posts/${subject}`);
 
       

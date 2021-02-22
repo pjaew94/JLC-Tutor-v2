@@ -26,7 +26,7 @@ export const getSpecificSubject = () => async dispatch => {
     }
 }
 
-export const getAllSubjects = (user) => async dispatch => {
+export const getAllSubjects = () => async dispatch => {
     try {
         const res = await axios.get('/api/subjects');
 
